@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>ONE WAY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="1.png" alt="ST. ANDREW'S CHURCH " width="" height="">
+
+
+        <div class="centered">ST ANDREW'S CHURCH</div>
+    </div>
+
+    <div id="navibar">
+        <a href="home.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="what'son.html">WHAT'S ON</a>
+        <a href="annoucements.html">ANNOUNCEMENTS</a>
+        <a href="">PORTAL</a>
+     
+
+    </div>
+
+
+
+    <div class="backgroung-img">
+            <h2>
+                <b>EVENTS TILL NOW</b>
+                </h2>
+    <div id ="Gallery">
+        <br>
+        <a href="gpday.html"><img src="IMG-20190805-WA0120.jpg"></a>
+        <a href="fday.html"><img src="IMG-20190804-WA0016.jpg"></a>
+
+    </div>
+    </div>
+       
+    <h2>UPCOMING EVENTS</h2>
+    <table>
+
+        <tr>
+            <th>DATE</th>
+            <th>EVENTS</th>
+        </tr>
+        <tr>
+            <td>14th AUGUST 2019</td>
+            <td>MATIECHO MOG</td>
+        </tr>
+        <tr>
+            <td>18th AUGUST 2019</td>
+            <td>GENERAL BODY MEETING</td>
+        </tr>
+        <tr>
+            <td>2nd SEPTEMBER 2019</td>
+            <td>CATECHISTS OUTING</td>
+        </tr>
+    </table>
+
+   
+    <h2>Articles for you</h2>
+    <div class = "colimg">
+    <div class="row">
+        <div class = "colimg">
+        <div class="column" style="background-color:#ff000082;">
+            <h5>Worship and Prayer</h5>
+           
+            <p>
+We are committed to creating a culture of worship through consistent rhythms of praise,
+worship and prayer that does not cease day or night.
+            </p>
+        </div>
+        <div class="column" style="background-color:#650a0a8c;">
+            <h5>Intimacy with Jesus</h5>
+ <p>
+Intimacy with Jesus is our pursuit and greatest reward.
+It is the one thing that inspires us in everything we do.
+From this place of intimacy we hear from God, 
+see as He sees and invite Him to have his way in us and in situations and people we encounter.</p>
+        </div>
+        <div class="column" style="background-color:#484850;">
+            <h5>Jesus with Family</h5>
+            <p>
+We are committed to seeing radical faith and passion for Jesus in the whole family.
+For husbands and wives to model the relationship between Christ and the church,
+and for children to be set apart for a life of eternal purpose. 
+We believe church is family and family is heaven’s plan for this earth.
+                
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="footer">
+        <p>St Andrews Church vasco_da_gama
+        </p>
+    </div>
+
+
+
+   
+
+<div class="container2">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="2.jpg" style="width:10%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="3.jpg" style="width:10%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="4.jpg" style="width:100%">
+  </div>
+    
+  
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container2">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="2.jpg" style="width:10%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="3.jpg" style="width:10%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="4.jpg" style="width:10%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    
+  
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+</body>
+
+</html>
+
+</html>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+    
+    $(".my-skills").click(function(){
+    
+    $(this).slideUp();
+    
+    });
+    
+    });

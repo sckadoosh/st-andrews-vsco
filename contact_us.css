@@ -1,0 +1,55 @@
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 300px; 
+  }
+  
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .login{
+  
+    background-image:linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.9)), url(../bg1.jpg);
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    padding:0px;
+    margin:0px;
+  }
+  .loginbox{
+    width:400px; 
+    height:400px;
+    background-color: #000;
+    position: absolute;
+    top: 28%;
+    left:33%;
+    padding: 30px;
+  }
+  input[type=text]{
+
+    padding:10px 30px;
+    border: 2px solid #0ff;
+  }
+  input[type=password]{
+
+    padding:10px 30px;
+    border: 2px solid #0ff;	
+  }
+  input[type=submit]{
+
+    font-size: 20px;
+    color: #dc143c;
+  }
+label
+{
+  color: #fff;
+  font-size: 20px;
+  padding: 25px;
+
+}
+
