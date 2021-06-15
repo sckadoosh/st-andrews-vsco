@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Cats Portal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="portal.css"> 
+      <script src="jquery-3.4.1.js"></script>      
+        <script>
+			$(document).ready(function(){
+                $('#un').focus(function(){
+                    $('span').show().fadeOut(4000);
+                })
+            });	
+            $(document).ready(function(){
+                $('input').focus(function(){
+                    $('span').show().fadeOut(4000);
+                })
+            });	
+            function validateform() {
+                var name = document.reg_form.uname.value;
+
+                if (name === null || name === "") {
+
+                    
+			    $("#un").focus(function(){
+                    $(form.span).html("Username can't be left blank");
+                });
+                    return false;
+                }
+
+                var password = document.reg_form.passwd.value;
+                if (password.length < 6) {
+                    alert("Password must be at least 6 characters long.");
+					 document.getElementById("p1").focus();;
+                    return false;
+                }
+
+                var password1 = document.reg_form.rpasswd.value;
+
+                if (password !== password1) {
+                    alert("password must be same!");
+					 document.getElementById("p2").focus();;
+                    return false;
+                }
+
+                var x = document.reg_form.email.value;
+                var atposition = x.indexOf("@");
+                var dotposition = x.lastIndexOf(".");
+                if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                    alert("Please enter a valid e-mail address");
+					 document.getElementById("em").focus();
+                    return false;
+                }
+                var mob_num = document.reg_form.mobile.value;
+                if (isNaN(mob_num)) {
+                    document.getElementById("mob").innerHTML = "Enter Numeric value only";
+                    document.getElementById("ph").focus();
+					return false;
+                } else if (mob_num.length !== 10) {
+                    document.getElementById("mob").innerHTML ="Mobile number should be of 10 digits";
+                    document.getElementById("ph").focus();
+					return false;
+                } else {
+				    document.getElementById("mob").innerHTML = "";
+                    return true;
+                }
+            }
+            function myFunction() {
+            var x = document.getElementById("p1");
+            if (x.type === "password") {
+             x.type = "text";
+            } else {
+               x.type = "password";
+  }
+}
+
+        </script>  
+    </head>
+    <body>
+            <header>
+                   
+                      <ul class="main-nav">
+                       <li><a href ="index.html">HOME</a></li>
+                        <li><a href ="index.html#sec1">ABOUT US</a></li>
+                        <li><a href ="index.html#sec2">EVENTS TILL NOW</a></li>
+                        <li><a href ="index.html#sec3">UPCOMING EVENTS</a></li>
+                        <li><a href ="index.html#sec4">ARTICLES</a></li>
+                        <li class ="active"><a href="portal.html">PORTAL</a></li>
+                      </ul>
+                    </div>
+                    <script>
+                        window.onscroll = function() {myFunction()};
+                        
+                        var navbar = document.getElementById("main-nav");
+                        var sticky = navbar.offsetTop;
+                        
+                        function myFunction() {
+                          if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky")
+                          } else {
+                            navbar.classList.remove("sticky");
+                          }
+                        }
+                        </script>
+                        <div class="form">
+                            <form name="reg_form" onsubmit="return validateform()"  >
+                                <label>Username</label> <input type ="text" name="uname" id="un" value="" autocomplete="off" /><br>
+                                <span>the user name which was given by the admin</span>
+                                <label>Password</label> <input type="password" name="passwd" id="p1" value="" /> 
+
+                                <span>password should be 6 or more characters long</span>
+                                
+                                
+                                <label>Mobile</label> <input type="text" name="mobile"  value="" id="ph"/><br>
+                                <input type="submit" value="Login" name="submitbtn" />
+                                <input type="reset" value="Reset" name="submitbtn" />
+                            </form>
+                            <span id="mob"></span><br>
+                        </div>
+                    </div>
+                  </header>  
+       
+    </body>
+</html>
